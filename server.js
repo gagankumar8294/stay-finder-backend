@@ -1,7 +1,11 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import listingRoutes from './src/features/listings/listings.routes.js';
 
 const server = express();
+
+// parse application/json
+server.use(bodyParser.json())
 
 // requests related to listings, redirect to
 server.use('/api/listings', listingRoutes);
