@@ -19,4 +19,8 @@
 4. created Routes and redirecting to certain get / post requests
 5. trigring the ceratin  controller method
 
+
 ----  src/features/listings/listings.model.js  ----
+1. class component
+2. constructor holds all the properties of the listing
+3. satic getAllListings -> returning all listings
