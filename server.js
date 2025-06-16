@@ -1,9 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 import listingRoutes from './src/features/listings/listings.routes.js';
 
 const server = express();
 
+server.use(cors()); // ✅ Allow cross-origin requests
 // parse application/json
 server.use(bodyParser.json())
 
