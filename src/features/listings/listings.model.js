@@ -12,6 +12,19 @@ export default class listingModel {
     static getListings() {
         return Listings;
     }
+
+    static addListing(listing) {
+        listing.id = Listings.length + 1;
+        Listings.push(listing);
+        return listing;
+    }
+
+    static getOneListing(id) {
+        const listing = Listings.find(
+            (i) => i.id == id
+        );
+        return listing;
+    }
 }
 
 var Listings = [

@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import listingRoutes from './src/features/listings/listings.routes.js';
+import userRoutes from './src/features/users/user.routes.js';
 
 const server = express();
 
@@ -11,6 +12,7 @@ server.use(bodyParser.json())
 
 // requests related to listings, redirect to
 server.use('/api/listings', listingRoutes);
+server.use('/api/users', userRoutes);
 
 server.use('/', (req, res) => {
     res.send('Welcome to Stay-Finder-backend-Project')
