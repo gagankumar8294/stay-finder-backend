@@ -37,3 +37,7 @@
 
 
 ----  src/features/users/.js  ----
+
+---- src/middlewares/jwt.middleware.js ----
+
+middleware used to login the user 
